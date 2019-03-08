@@ -1,7 +1,7 @@
 React X Mobx
 =
 
-[여기]https://velog.io/@velopert/MobX-1-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-9sjltans3p)를 참고하였습니다.
+[여기](https://velog.io/@velopert/MobX-1-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-9sjltans3p)를 참고하였습니다.
 
 
 주요개념
