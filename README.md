@@ -30,3 +30,11 @@ yarn add mobx mobx-react
 Provider 를 통해 react에 Mobx스토어 적용
 
 inject를 통해 컴포넌트에 스토어 주입
+
+
+
+mobx-react-devtools
+어떤 값을 바꿨을 때 어떠한 컴포넌트들이 영향을 받고, 업데이트는 얼마나 걸리고, 어떠한 변화가 일어났는지에 대한 세부적인 정보를 볼 수 있게 해준다
+```
+yarn add mobx-react-devtools
+```

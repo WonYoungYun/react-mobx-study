@@ -1,7 +1,12 @@
 import { decorate, observable, action } from 'mobx'
 
 class CounterStore {
-    number = 0;
+    number = 1;
+
+    constructor(root) {
+        this.root = root;
+    }
+
     increase = () => {
         this.number++;
     }

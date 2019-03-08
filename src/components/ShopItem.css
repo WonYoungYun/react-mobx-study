@@ -1,0 +1,22 @@
+.ShopItem {
+    background: #fff;
+    border: 1px sold #495057;
+    padding: .5rem;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.ShopItem h4{
+    margin-top: 0;
+    margin-bottom: 1rem;
+
+}
+
+.ShopItem:hover{
+    background: #495057;
+    color: #fff;
+}
+
+.ShopItem+.ShopItem{
+    margin-top: 1rem;
+}
