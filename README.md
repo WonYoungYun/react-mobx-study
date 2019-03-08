@@ -1,68 +1,32 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React X Mobx
+=
 
-## Available Scripts
+[여기]https://velog.io/@velopert/MobX-1-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-9sjltans3p)를 참고하였습니다.
 
-In the project directory, you can run:
 
-### `npm start`
+주요개념
+=
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. Observable State(관찰 받는 state)
+- mobx를 사용하고 있는 앱의 상태는 Observable하다. 관찰되고 있다는 의미이며, 특정 부분이 바뀌면 Mobx는 어떤 부분이 바뀌었는지 알 수 있다.
+2. Computed Value(연산된 값)
+-  연산된 값은 기존의 상태값과 다른 연산된 값에 기반하여 만들어 질 수 있는 값
+-  성능의 최적화를 위해 사용, 연산에 기반되는 값이 바뀔때 연산하고, 바뀌지 않으면 기존의 값을 사용한다.
+3. Reactions(반응)
+- Computed Value와 비슷하지만, 특정값의 연산에만 처리가 되는 반면에 Reactions는  값이 바뀔때마다 해야하는 일을 정하는 것을 의미한다.
+4. Actions
+- 상태에 변화를 일으키는 것,
+- Observable State에 변화를 일으키는 코드를 호출하는 것도 하나의 액션
+- Redux와는 다르게 객체형태로만들지는 않는다
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+react에서 mobx사용하기
+-
 
-### `npm test`
+```
+yarn add mobx mobx-react
+```
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Provider 를 통해 react에 Mobx스토어 적용
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+inject를 통해 컴포넌트에 스토어 주입
